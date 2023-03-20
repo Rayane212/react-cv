@@ -36,7 +36,9 @@
             grid-template-rows: 1fr 1fr;
             grid-template-areas:
                 "L"
-                "F";
+                "F"
+                "D"
+                "LE";
 
             .languageDisplay {
                 grid-area: L;
@@ -44,6 +46,9 @@
 
             .frameworkDisplay {
                 grid-area: F;
+            }
+            .databaseDisplay{
+                grid-area: D;
             }
 
             h3 {
@@ -119,13 +124,14 @@
             margin: 0 0 .5rem .5rem;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 10% 1fr 1fr;
+            grid-template-rows: 10% 1fr 1fr 1fr ;
             grid-template-areas:
                 "1"
                 "2"
-                "3";
+                "3"
+                "4";
 
-            h3 {
+            .exp {
                 grid-area: 1;
             }
 
@@ -144,13 +150,57 @@
                 padding: 0 1rem;
             }
 
-            .exp-1 {
+            .exp1 {
                 grid-area: 2;
+                ul>li{
+                    list-style-type: circle;
+                    margin-left: 1rem;
+                }
+                margin-top: -2rem;
+                margin-bottom: 1rem;
             }
 
-            .exp-2 {
+            .exp2 {
                 grid-area: 3;
+                ul>li{
+                    list-style-type: circle;
+                    margin-left: 1rem;
+                }
+                margin-top: -2rem;
+
             }
+            .formations{
+                grid-area: 4;
+                transform: translateY(-8rem);
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 10% 1fr 1fr;
+                grid-template-areas:
+                    "7"
+                    "8"
+                    "9"; 
+                .formation{
+                    grid-area: 7;
+                }
+                .formation1{
+                    grid-area: 8;
+                    ul>li{
+                        list-style-type: circle;
+                        margin-left: 1rem;
+                    }
+                    margin-bottom: 1rem;
+                }
+                .formation2{
+                    grid-area: 9;
+                    ul>li{
+                        list-style-type: circle;
+                        margin-left: 1rem;
+                    }
+                }
+            }
+          
+            
+           
         }
 
         .otherSkills {

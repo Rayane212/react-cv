@@ -6,18 +6,26 @@ class Languages extends Component {
             { id: 1, value: "JavaScript", xp: 1.8 },
             { id: 2, value: "HTML/CSS", xp: 2 },
             { id: 3, value: "Php", xp: 0.4 },
-            { id: 4, value: "Python", xp: 0.8 }
-
+            { id: 5, value: ".NET Core", xp: 0.8 },
+            { id: 6, value: "C/C++", xp: 0.8 },
+            { id: 7, value: "Java", xp: 0.8 }
         ],
         frameworks: [
             { id: 1, value: "ReactJs", xp: 1.8 },
             { id: 2, value: "Bootstrap", xp: 2 },
             { id: 3, value: "Sass", xp: 0.4 },
-            { id: 4, value: "Material UI", xp: 0.8 }
+        ],
+        database :[
+            { id: 1, value: "SQL Server", xp: 0.8 },
+            { id: 2, value: "MySQL", xp: 0.8 }        
+        ],
+        foreignLanguages:[
+            { id: 1, value: "Anglais", xp: 0.8 }
+
         ]
     }
     render() {
-        let { languages, frameworks } = this.state;
+        let { languages, frameworks, database, foreignLanguages } = this.state;
         return (
             <div className="languagesFrameworks">
                 <ProgressBar
@@ -29,6 +37,11 @@ class Languages extends Component {
                     languages={frameworks}
                     className="frameworksDisplay"
                     title="Frameworks & Library"
+                />
+                 <ProgressBar
+                    languages={database}
+                    className="databaseDisplay"
+                    title="Database"
                 />
 
             </div>
