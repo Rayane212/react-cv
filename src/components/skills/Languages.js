@@ -20,7 +20,8 @@ class Languages extends Component {
             { id: 2, value: "MySQL", xp: 0.8 }        
         ],
         foreignLanguages:[
-            { id: 1, value: "Anglais", xp: 0.8 }
+            { id: 1, value: "English", xp: 0.8 },
+            { id: 2, value: "French", xp: 0.8 }
 
         ]
     }
@@ -42,6 +43,11 @@ class Languages extends Component {
                     languages={database}
                     className="databaseDisplay"
                     title="Database"
+                />
+                <ProgressBar
+                    languages={foreignLanguages}
+                    className="foreignLanguagesDisplay"
+                    title="Foreign Languages"
                 />
 
             </div>

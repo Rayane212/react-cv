@@ -33,7 +33,7 @@
             margin-bottom: .5rem;
             display: grid;
             grid-template-columns: 1fr;
-            grid-template-rows: 1fr 1fr;
+            grid-template-rows: 2fr 1.2fr 1fr 1fr;
             grid-template-areas:
                 "L"
                 "F"
@@ -49,6 +49,9 @@
             }
             .databaseDisplay{
                 grid-area: D;
+            }
+            .foreignLanguagesDisplay{
+                grid-area: LE;
             }
 
             h3 {
@@ -74,15 +77,15 @@
                         width: 44%;
                     }
 
-                    &:nth-child(2):before,
-                    &:nth-child(3):before {
-                        content: '';
-                        background: rgba(180, 179, 179, 0.507);
-                        position: absolute;
-                        height: 146px;
-                        width: 1px;
-                        transform: translate(9px, 19px);
-                    }
+                    // &:nth-child(2):before,
+                    // &:nth-child(3):before {
+                    //     content: '';
+                    //     background: rgba(180, 179, 179, 0.507);
+                    //     position: absolute;
+                    //     height: 146px;
+                    //     width: 1px;
+                    //     transform: translate(9px, 19px);
+                    // }
                 }
             }
 
