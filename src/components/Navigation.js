@@ -1,5 +1,8 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHome, faMountain, faImages, faAddressBook } from '@fortawesome/free-solid-svg-icons';
+import { faLinkedin, faGithub, faCodepen } from '@fortawesome/free-brands-svg-icons';
 
 const Navigation = () => {
     return (
@@ -14,42 +17,42 @@ const Navigation = () => {
             <div className="navigation">
                 <ul>
                     <li>
-                        <NavLink to="/" className={window.location.pathname === "/" ? "navActive" : ""}>
-                            <i className="fas fa-home"></i>
+                        <NavLink exact to="/" activeClassName="navActive">
+                            <FontAwesomeIcon icon={faHome} />
                             <span>Accueil</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/skills" className={window.location.pathname === "/skills" ? "navActive" : ""}>
-                            <i className="fas fa-mountain"></i>
+                        <NavLink to="/skills" activeClassName="navActive">
+                            <FontAwesomeIcon icon={faMountain} />
                             <span>Compétences</span>
                         </NavLink>
                     </li>
                     <li>
-                        <NavLink to="/portfolio" className={window.location.pathname === "/portfolio" ? "navActive" : ""}>
-                            <i className="fas fa-images"></i>
+                        <NavLink to="/portfolio" activeClassName="navActive">
+                            <FontAwesomeIcon icon={faImages} />
                             <span>Portfolio</span>
                         </NavLink>
-
                     </li>
                     <li>
-                        <NavLink to="/contact" className={window.location.pathname === "/contact" ? "navActive" : ""}>
-                            <i className="fas fa-address-book"></i>
+                        <NavLink to="/contact" activeClassName="navActive">
+                            <FontAwesomeIcon icon={faAddressBook} />
                             <span>Contact</span>
                         </NavLink>
                     </li>
                 </ul>
             </div>
+
             <div className="socialNetwork">
                 <ul>
                     <li>
-                        <a href="https://www.linkedin.com/in/rayane-h-b6348725a/" target="_blank" rel='noopener noreferrer'><i className="fab fa-linkedin" /></a>
+                        <a href="https://www.linkedin.com/in/rayane-h-b6348725a/" target="_blank" rel='noopener noreferrer'><FontAwesomeIcon icon={faLinkedin} /></a>
                     </li>
                     <li>
-                        <a href="https://github.com/Rayane212" target="_blank" rel='noopener noreferrer'><i className="fab fa-github" /></a>
+                        <a href="https://github.com/Rayane212" target="_blank" rel='noopener noreferrer'><FontAwesomeIcon icon={faGithub} /></a>
                     </li>
                     <li>
-                        <a href="https://google.com" target="_blank" rel='noopener noreferrer'><i className='fab fa-codepen' /></a>
+                        <a href="https://google.com" target="_blank" rel='noopener noreferrer'><FontAwesomeIcon icon={faCodepen} /></a>
                     </li>
                 </ul>
                 <div className="signature">
